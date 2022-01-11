@@ -17,7 +17,7 @@ public class Program {
         long endTime = System.currentTimeMillis();
         long elapsed = endTime - startTime;
         //print result
-        System.out.println("Insertion Sort: Array Size: " + data.length + " Time Elapsed: " + elapsed + " ms");
+        System.out.println("Insertion sort took " + elapsed+ " ms");
     }
 
     public static void printSelectionSort(double[] data) {
@@ -35,7 +35,7 @@ public class Program {
         long endTime = System.currentTimeMillis();
         long elapsed = endTime - startTime;
         //print result
-        System.out.println("Selection Sort: Array Size: " + data.length + " Time Elapsed: " + elapsed+ " ms");
+        System.out.println("Selection sort took " + elapsed+ " ms");
     }
 
     public static void printQuickSort(double[] data) {
@@ -44,7 +44,7 @@ public class Program {
         //print result
         long endTime = System.currentTimeMillis();
         quickSortElapsedTime = endTime - startTime;
-        System.out.println("Quick Sort: Array Size: " + data.length + " Time Elapsed: " + quickSortElapsedTime+ " ms");
+        System.out.println("Quick sort took " + quickSortElapsedTime+ " ms");
     }
 
 
@@ -54,7 +54,7 @@ public class Program {
         mergeSort(data, 0, data.length);
         long endTime = System.currentTimeMillis();
         long elapsed = endTime - startTime;
-        System.out.println("Merge Sort: Array Size: " + data.length + " Time Elapsed: " + elapsed+ " ms");
+        System.out.println("Merge sort took " + elapsed+ " ms");
     }
 
     public static void printShellSort(double[] data) {
@@ -76,7 +76,7 @@ public class Program {
         long endTime = System.currentTimeMillis();
         long elapsed = endTime - startTime;
         //print result
-        System.out.println("Shell Sort: Array Size: " + data.length + " Time Elapsed: " + elapsed+ " ms");
+        System.out.println("Shell sort took "  + elapsed + " ms");
     }
 
     public static void swap(double[] data, int i, int j) {
@@ -120,7 +120,7 @@ public class Program {
 
     public static void merge(double[] data, int start, int mid, int end) {
 
-        if (data[mid - 1] <= data[mid])  return;
+        if (data[mid - 1] <= data[mid]) return;
         int i = start;
         int j = mid;
         int tempIndex = 0;
@@ -134,7 +134,7 @@ public class Program {
 
     private static void quickSort(double[] data, int start, int end) {
 
-        if (end - start < 2) return;
+        if (start < end) return;
         int pivotIndex = partition(data, start, end);
         quickSort(data, start, pivotIndex);
         quickSort(data, pivotIndex + 1, end);
@@ -142,7 +142,7 @@ public class Program {
 
     public static double[] getArray() throws IOException {
         double[] data = new double[300000];
-      File file = new File("Query.txt");
+        File file = new File("Query.txt");
         BufferedReader br
                 = new BufferedReader(new FileReader(file));
 
@@ -151,40 +151,48 @@ public class Program {
         // Condition holds true till
         // there is character in a string
         int i = 0;
-        while ((line = br.readLine()) != null)
-        {
+        while ((line = br.readLine()) != null) {
             double number = convertNumber(line);
             data[i] = number;
             i++;
         }
-        System.out.println("Counter: " + i);
         return data;
     }
 
-    private static double convertNumber(String line)
-    {
+    private static double convertNumber(String line) {
         StringBuilder seq1 = new StringBuilder();
         // get the sequence before the ten power
-        for(int i = 0; i<line.length(); i++)
-        {
-            if(line.charAt(i) == 'e')
+        for (int i = 0; i < line.length(); i++) {
+            if (line.charAt(i) == 'e')
                 break;
             seq1.append(line.charAt(i));
         }
         char powerVal = line.charAt(line.length() - 1);
-        double tenPower =  Integer.parseInt(String.valueOf(powerVal));
+        double tenPower = Integer.parseInt(String.valueOf(powerVal));
         double num = Double.parseDouble(seq1.toString());
-        return num / Math.pow(10,tenPower);
+        return num / Math.pow(10, tenPower);
+    }
+
+    public static int[] convertIntArray(double[] data) {
+        final int[] intArray = new int[data.length];
+        for (int i = 0; i < intArray.length; ++i)
+            intArray[i] = (int) data[i];
+        return intArray;
     }
 
     public static void main(String[] args) throws IOException {
-       
-        double[] data = getArray();
-        printInsertionSort(data);
-        printSelectionSort(data);
-        printMergeSort(data);
-        printShellSort(data);
-        printQuickSort(data);
+
+        double[] data_1 = getArray();
+        double[] data_2 = getArray();
+        double[] data_3 = getArray();
+        double[] data_4 = getArray();
+        double[] data_5 = getArray();
+
+        printInsertionSort(data_1);
+        printSelectionSort(data_2);
+        printMergeSort(data_3);
+        printShellSort(data_4);
+        printQuickSort(data_5);
     }
 }
 
