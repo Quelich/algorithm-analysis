@@ -1,4 +1,4 @@
-# sorting-algos-comparison
+# Analysis of the Algorithms
 Comparison of different sorting algorithms
 
 # Comparison
