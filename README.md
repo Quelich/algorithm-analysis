@@ -7,5 +7,6 @@ Comparison of different sorting algorithms
 - Quick Sort
 - Merge Sort & Merge Sort with Recursion Tree
 - Shell Sort
+- Heap Sort
 - Matrix Multiplication (Brute Force & Recursive)
 - Maximum Subarray Problem (Brute Force & Recursive)
