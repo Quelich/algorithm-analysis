@@ -9,4 +9,5 @@ The implementation and comparison of different sorting algorithms in Java.
 - Shell Sort
 - Heap Sort
 - Matrix Multiplication (Brute Force & Recursive)
+- Strassen's Matrix Multiplication
 - Maximum Subarray Problem (Brute Force & Recursive)
