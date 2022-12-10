@@ -1,5 +1,5 @@
 # Analysis of the Algorithms
-Comparison of different sorting algorithms
+The implementation and comparison of different sorting algorithms in Java.
 
 # Comparison
 - Insertion Sort
