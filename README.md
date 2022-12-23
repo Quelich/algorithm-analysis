@@ -1,5 +1,5 @@
 # Analysis of the Algorithms
-This repository includes the implementation of sorting algorithms and matrix operations in Java. It also compares the running time of sorting algorithms and matrix multiplication algorithms.
+This repository includes the implementation of sorting algorithms and matrix operations in Java. It also compares the time and space complexity of sorting algorithms and matrix multiplication algorithms.
 
 # Comparison
 - Insertion Sort
