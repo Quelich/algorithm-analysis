@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Random;
 
-public class selection
+public class selection_sort
 {
     public static void main(String [] args)
     {

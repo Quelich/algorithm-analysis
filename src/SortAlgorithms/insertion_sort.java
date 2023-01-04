@@ -1,32 +1,31 @@
 import java.util.Arrays;
 import java.util.Random;
 
-public class insertion
+public class insertion_sort
 {
     public static void main(String [] args)
     {
-//        int array_size = 10;
-//        int n_repetitions = 10;
-//
-//        int array [] = new int[array_size];
-//
-//        Random rand = new Random();
-//        rand.setSeed(System.currentTimeMillis());
-//
-//        //part(b) choosing one integer array and showing that the sort method works
-//
-//        //initialize elements of array with random integers
-//        for (int i = 0; i < array.length; i++)
-//            array[i] = rand.nextInt(100);
-//
-//        print_array(array);
-//        insertion_sort(array);
-//        print_array(array);
-//
-//        //part(c) min, average, max running times
-//
-//        //statistics(1000, 1000);
-        statistics(10000, 1000);
+       int array_size = 10;
+       int n_repetitions = 10;
+
+       int array [] = new int[array_size];
+
+       Random rand = new Random();
+       rand.setSeed(System.currentTimeMillis());
+
+       //part(b) choosing one integer array and showing that the sort method works
+
+       //initialize elements of array with random integers
+       for (int i = 0; i < array.length; i++)
+           array[i] = rand.nextInt(100);
+
+       print_array(array);
+       insertion_sort(array);
+       print_array(array);
+
+       //part(c) min, average, max running times
+       //statistics(1000, 1000);
+       // statistics(10000, 1000);
     }
 
     //part(a) implementing insertion sort algorithm as a method below

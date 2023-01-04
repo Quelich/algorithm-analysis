@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Random;
 
-public class merge {
+public class mergesort_improved {
     public static void main(String[] args) {
         int array_size = 65536;
         //int array_size = 16;

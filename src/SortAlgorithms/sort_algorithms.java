@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class SortAlgorithms {
+public class sort_algorithms {
     static long quickSortElapsedTime;
 
     public static void printInsertionSort(double[] data) {

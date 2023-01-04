@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
-public class merge
+public class merge_sort
 {
     public static void main(String [] args)
     {
