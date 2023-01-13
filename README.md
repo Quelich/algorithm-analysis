@@ -14,3 +14,4 @@ This repository includes the implementation of sorting algorithms and matrix ope
 - Maximum Subarray Problem (Brute Force & Recursive)
 - Count Sort `Average Time Complexity: O(n), Space Complexity: O(k)`
 - Radix Sort `Average Time Complexity: O(nk), Space Complexity: O(n + k)`
+- Bucket Sort `Average Time Complexity: O(n + k), Space Complexity: O(n)`
