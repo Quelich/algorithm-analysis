@@ -1,4 +1,4 @@
-public class heapsort {
+public class heap_sort {
     public static void main(String[] args) {
         int A[] = {83, 90, 15, 5, 75, 41, 86, 47, 1, 41 };
         Heapsort(A);
